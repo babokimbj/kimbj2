@@ -15,7 +15,7 @@ img {
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 
   /* 회전 애니메이션 추가 */
-  animation: spin 10s linear infinite;
+  animation: spin 5s linear infinite;
 }
 
 /* spin 애니메이션 정의 */
