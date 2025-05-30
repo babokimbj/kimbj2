@@ -7,23 +7,22 @@
 </head>
 <body>
   <img src="image.jpg" alt="">
-  <audio src="audio.mp3" autoplay loop muted></audio>
+  <audio id="bgm" src="audio.mp3"></audio>
+  <button id="playBtn">▶️ 음악 재생</button>
+
+  <script>
+    const audio = document.getElementById('bgm');
+    const btn = document.getElementById('playBtn');
+
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = '⏸️ 음악 일시정지';
+      } else {
+        audio.pause();
+        btn.textContent = '▶️ 음악 재생';
+      }
+    });
+  </script>
 </body>
 </html>
-
-<button id="playBtn">🔊 소리 켜기</button>
-
-<script>
-  const audio = document.querySelector('audio');
-  const btn = document.getElementById('playBtn');
-
-  btn.addEventListener('click', () => {
-    if(audio.muted){
-      audio.muted = false;
-      btn.textContent = "🔇 소리 끄기";
-    } else {
-      audio.muted = true;
-      btn.textContent = "🔊 소리 켜기";
-    }
-  });
-</script>
