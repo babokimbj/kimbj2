@@ -2,10 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>아 섹스 하고싶다</title>
+  <title>으헤 시팔</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <img src="image.jpg" alt="">
 </body>
 </html>
+  <audio src="audio.mp3" autoplay loop muted></audio>
+
+<button id="playBtn">🔊 소리 켜기</button>
+
+<script>
+  const audio = document.querySelector('audio');
+  const btn = document.getElementById('playBtn');
+
+  btn.addEventListener('click', () => {
+    if(audio.muted){
+      audio.muted = false;
+      btn.textContent = "🔇 소리 끄기";
+    } else {
+      audio.muted = true;
+      btn.textContent = "🔊 소리 켜기";
+    }
+  });
+</script>
