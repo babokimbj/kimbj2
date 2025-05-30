@@ -27,3 +27,21 @@ img {
     transform: rotate(360deg);
   }
 }
+
+#playBtn {
+  position: fixed;   /* 화면에 고정 */
+  top: 20px;         /* 위에서 20px 떨어짐 */
+  right: 20px;       /* 오른쪽에서 20px 떨어짐 */
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#playBtn:hover {
+  background-color: #666;
+}
