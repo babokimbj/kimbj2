@@ -40,8 +40,18 @@ img {
   color: white;
   border: none;
   transition: background-color 0.3s ease;
+  z-index: 1000;
 }
 
 #playBtn:hover {
   background-color: #666;
+}
+
+/* 볼륨 조절 슬라이더 스타일 추가 */
+#volumeControl {
+  position: fixed;
+  top: 60px;         /* playBtn 바로 아래 */
+  right: 20px;
+  width: 120px;
+  z-index: 1000;
 }
