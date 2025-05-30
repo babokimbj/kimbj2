@@ -8,11 +8,14 @@
 <body>
   <img src="image.jpg" alt="">
   <audio id="bgm" src="audio.mp3"></audio>
+
   <button id="playBtn">▶️ 음악 재생</button>
+  <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" />
 
   <script>
     const audio = document.getElementById('bgm');
     const btn = document.getElementById('playBtn');
+    const volumeControl = document.getElementById('volumeControl');
 
     btn.addEventListener('click', () => {
       if (audio.paused) {
@@ -22,6 +25,10 @@
         audio.pause();
         btn.textContent = '▶️ 음악 재생';
       }
+    });
+
+    volumeControl.addEventListener('input', () => {
+      audio.volume = volumeControl.value;
     });
   </script>
 </body>
